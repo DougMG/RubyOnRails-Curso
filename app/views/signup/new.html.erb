@@ -1,3 +1,21 @@
-<%= form_for @user, url: "/cadastre-se do |f|" %>
-
+<%= form_for @user, url: "/cadastre-se" do |f| %>
+	<p>
+		<%= f.label :name, "Seu nome" %>
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :name, "Seu email"%>
+		<%= f.email_field :email %>
+	</p>
+	<p>
+		<%= f.label :password, "Sua senha" %>
+		<%= f.password_field :password %>
+	</p>
+	<p>
+		<%= f.label :password_confirmation, "Confirme sua senha" %>
+		<%= f.password_field :password_confirmation %>
+	</p>
+	<p>
+		<%= f.submit "Quero me cadastrar" %>
+	</p>
 <% end %>

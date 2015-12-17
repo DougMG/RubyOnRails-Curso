@@ -14,7 +14,15 @@ feature "Signup" do
     expect(current_path).to eql("/entrar")
     expect(page).to have_content("Cadastro realizado com sucesso!")
   end
-  scenario "when sending invalid data"
+  scenario "when sending ivalid info" do
+    visit "/"
+    click_link "Quero me Cadastrar"
+    click_button "Quero me Cadastrar"
+
+    expect(current_path).to eql("/cadastre-se")
+    expect(page).to have_content("Verifique o formulário anterior")
+  end
+  #scenario "when sending invalid data"
   scenario "when already logged in"
   
 end
